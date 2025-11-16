@@ -57,8 +57,9 @@ std::string decrypt(const std::array<char, N>& arr) {
 
 Xors the encrypted data back to its original values then returns the results as a `std::string`
 
-![pdb](images/https://github.com/RicoPopovitch/Vtxor/blob/main/images/nopdb.png)
-![nopdb](images/nopdb.png)
+![pdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/pdb.png)
+![nopdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/nopdb.png)
+
 
 
 
