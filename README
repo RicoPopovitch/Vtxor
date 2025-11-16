@@ -1,5 +1,5 @@
-###Vtxor: Compile-Time XOR String Encryption
-##By: RicoPopovitch
+Vtxor: Compile-Time XOR String Encryption
+By: RicoPopovitch
 
 This library provides a lightweight, header-only utility for compile-time XOR encryption and dynamic building of string literals in C++. 
 
@@ -56,3 +56,4 @@ std::string decrypt(const std::array<char, N>& arr) {
 }
 
 Xors the encrypted data back to its original values then returns the results as a `std::string`
+
