@@ -59,15 +59,17 @@ std::string decrypt(const std::array<char, N>& arr) {
 ```
 
 Xors the encrypted data back to its original values then returns the results as a `std::string`
+
+strings will not appear in string pool at all
 ![nopdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/stringpool.png)
--strings will not appear in string pool at all
 
-![pdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/pdb.png)
--strings will look like this if viewed in ida with a pdb
-
+they will look like this if viewed with no pdb 
 ![nopdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/nopdb.png)
 
--they will look like this if viewed with no pdb 
+strings will look like this if viewed in ida with a pdb
+![pdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/pdb.png)
+
+
 
 
 
