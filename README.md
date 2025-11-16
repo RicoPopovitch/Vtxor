@@ -66,7 +66,9 @@ Xors the encrypted data back to its original values then returns the results as 
 -strings will look like this if viewed in ida with a pdb
 
 ![nopdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/nopdb.png)
- -they will look like this if viewed with no pdb 
+
+-they will look like this if viewed with no pdb 
+
 
 
 
