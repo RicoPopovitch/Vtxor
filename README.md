@@ -17,7 +17,7 @@ Runtime encryption is still recomdeded.
 `dcrypt()` template reconstructs a runtime `std::string` from an encrypted array.
 `print()` couts the encrypted characters directly for debugging and verification. 
 
-
+```cpp
 constexpr char g_key = []() {
     const char* time = __TIME__;
     char key = 0x24;
@@ -26,12 +26,13 @@ constexpr char g_key = []() {
     }
     return key ? key : 0x42;
 }();
+```
 
 Computes `g_key` during compile time.
 XORs an initial key by `__TIME__` to produce a semi-random key each compilation.
 Feel free to change the initial key or the fallback, althouhg keeping a fallback is recomended to ensure no plaintext.
 
-
+```cpp
 template<char Key, std::size_t N>
 constexpr std::array<char, N> crypt(const char(&str)[N]) {
     std::array<char, N> arr{};
@@ -40,11 +41,12 @@ constexpr std::array<char, N> crypt(const char(&str)[N]) {
     }
     return arr;
 }
+```
 
 Takes a paintext string as a paramater then converts and encrypts
 Returns a constexpr  `std::array`
 
-
+```cpp
 template<char Key, std::size_t N>
 std::string decrypt(const std::array<char, N>& arr) {
     std::string decrypted;
@@ -54,11 +56,19 @@ std::string decrypt(const std::array<char, N>& arr) {
     }
     return decrypted;
 }
+```
 
 Xors the encrypted data back to its original values then returns the results as a `std::string`
 
+![nopdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/stringpool.png)
+strings will not appear in string pool at all
+
 ![pdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/pdb.png)
+strings will look like this if viewed in ida with a pdb
+
 ![nopdb](https://raw.githubusercontent.com/RicoPopovitch/Vtxor/main/images/nopdb.png)
+they will look like this if viewed with no pdb 
+
 
 
 
